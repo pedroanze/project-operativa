@@ -1,0 +1,129 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #f7f7f7;
+    --red: red;
+    --white: #FFFFFF;
+    --black: #000000;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    margin: 0;
+    font-family: 'Arenas movedizas', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px ;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.menu{
+    display: none;
+}
+.logo{
+    height: 50px;
+    width: 100%;
+    
+}
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height:60px;
+}
+.navbar-left{
+    display: flex;
+
+}
+.navbar-left ul{
+
+    margin-left: 12px;
+}
+.navbar-left ul li a,
+.navbar-right ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+
+ /* estilo del conteiner de botones */
+.main-conteiner {
+    margin-top: 100px;
+}
+
+
+ .cards-conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,260px);
+    place-content: center;
+}
+
+.bottom-info{ 
+    display: flex;
+    justify-content: center;
+    text-align: center;  
+    align-items: center; 
+    text-decoration: none;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: var(--lg);
+   
+    width: 230px;
+    height: 100px;
+    background-color: var(--white);
+    border: none;
+
+    border: 1px solid var(--red);
+    border-radius: 8px;
+    color: black;
+
+    margin: 20px;  
+    margin-top: 10px;
+
+}
+
+
+
+
+
+
+
+@media (max-width:640px) {
+    .menu{
+        display: block;
+        
+    }
+    .navbar-left ul{
+        display: none;
+    }
+    .navbar-email{
+        display: none;
+    }
+    .cards-conteiner {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,140px);
+        
+        
+    }
+    .product-card {
+        width: 140px;
+
+    }
+    .product-card img {
+        width: 140px;
+        height: 140px;
+
+    }
+}
