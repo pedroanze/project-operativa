@@ -1,7 +1,7 @@
 :root {
     --very-light-pink: #C7C7C7;
     --text-input-field: #f7f7f7;
-    --text-hospital-green: #ACD9B2;
+    --red: red;
     --white: #FFFFFF;
     --black: #000000;
     --sm: 14px;
@@ -53,8 +53,8 @@ nav{
 }
 .navbar-left ul li a:hover,
 .navbar-right ul li a:hover {
-    color: var(--text-hospital-green);
-    border: 1px solid var(--text-hospital-green)
+    color: var(--red);
+    border: 1px solid var(--red);
 }
 
 
@@ -82,10 +82,10 @@ nav{
    
     width: 230px;
     height: 100px;
-    background-color: white;
+    background-color: var(--white);
     border: none;
 
-    border: 1px solid red;
+    border: 1px solid var(--red);
     border-radius: 8px;
     color: black;
 
