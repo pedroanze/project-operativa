@@ -1,17 +1,31 @@
 :root {
     --very-light-pink: #C7C7C7;
     --text-input-field: #f7f7f7;
-    --red: red;
+    --red: #ff0000;
     --white: #FFFFFF;
     --black: #000000;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
 }
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Arenas movedizas', sans-serif;
 }
+
+
+
+
+
+/* estilos del nav */
+
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -58,6 +72,28 @@ nav{
 }
 
 
+/* estilos del hero */
+.hero{
+    display: grid;
+    place-items: center;
+}
+.welcome{
+    display: flex;
+    top: 25%;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    }
+/* particles.js */
+
+#particles-js{
+    width: 100%;
+    height: 50vh;
+    
+}
+
+
+
  /* estilo del conteiner de botones */
 .main-conteiner {
     margin-top: 100px;
@@ -95,11 +131,6 @@ nav{
 }
 
 
-
-
-
-
-
 @media (max-width:640px) {
     .menu{
         display: block;
@@ -113,17 +144,15 @@ nav{
     }
     .cards-conteiner {
         display: grid;
-        grid-template-columns: repeat(auto-fill,140px);
+        grid-template-columns: repeat(auto-fill,310px);
         
         
     }
-    .product-card {
-        width: 140px;
+    .bottom-info {
+        margin-left:0 ;
+        margin-right: 0;
+        width: 300px;
 
     }
-    .product-card img {
-        width: 140px;
-        height: 140px;
 
-    }
 }
