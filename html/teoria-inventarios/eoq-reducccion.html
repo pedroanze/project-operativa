@@ -8,6 +8,62 @@
 </head>
 <body>
     <h1>MODELO EOQ CON REDUCCION DE FALTANTES</h1>
+    <form action="/" class = "form">
+        <label for="number" class = "label">Demanda</label>
+        <input type="number" placeholder="D" class = "input" id="demanda">
+
+        <label for="number" class = "label">Costo de preparación</label>
+        <input type="number" placeholder="K" class = "input" id="k">
+
+        <label for="number" class = "label">Costo de retención</label>
+        <input type="number" placeholder="H" class = "input" id="h">
+
+        <label for="number" class = "label">Descuento</label>
+        <input type="number" placeholder="q" class = "input" id ="q">
+
+        <label for="number" class = "label">Costo 1</label>
+        <input type="number" placeholder="C1" class = "input" id="c1">
+        
+        <label for="number" class = "label">Costo 2</label>
+        <input type="number" placeholder="C2" class = "input" id="c2">
+
+        <label for="number" class = "label">Tiempo de espera</label>
+        <input type="number" placeholder="L" class = "input" id="l">
+        
+        <input type= "button" id="resultado" class="primary-button secondary-button" value="calcular">
+    </form>
+    <div>
+        <ul>
+            <li>
+                <p id="minimo">calcular y minimo:</p>
+            </li>
+            <li>
+                <p id="optimo">calcular y optimo: </p>
+            </li>
+            <li>
+                <p id="tiempo">calcular tiempo:</p>
+            </li>
+            <li>
+                <p id="rop">calcular ROP</p>
+            </li>
+            <li>
+                <p id="zona1">mostrar zonas 1 </p>
+            </li>
+            <li>
+                <p id="zona2">mostrar zonas 2 </p>
+            </li>
+            <li>
+                <p id="zona3">mostrar zonas 3 </p>
+            </li>
+            <li>
+                <p id="posicion"> </p>
+            </li>
+        </ul>
+    </div>
+    <script src="/js/eoqcondescuento.js">
+
+    </script>
+</div>
 
 </body>
 </html>
