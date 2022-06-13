@@ -18,31 +18,30 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    
+}
+.conteiner-primary{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 .form-conteiner{
+    
+    width: 80%;
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    width: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid var(--red);
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px;
+    
 }
-.logo {
-    width: 150px;
-    margin-bottom: 48px;
-    justify-self: center;
-    display: none;
 
-}
 .form {
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
+    
 }
-form a{
-    color: var(--red);
-    font-size: var(--sm);
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 52px;
-}
+
 .titulo{
     font-size: var(--lg);
     color: var(--red);
@@ -51,9 +50,11 @@ form a{
     text-align: center;
 }
 .label {
+    display: flex;
     font-size: var(--sm);
     font-weight: bold;
     margin-bottom: 2px;
+    align-items: center;
 }
 .input{
     background-color: var(--text-input-field);
@@ -70,7 +71,7 @@ form a{
     border: none;
     border-radius: 8px;
     color: var(--white);
-    width: 100%;
+    width: 30%;
     text-align: center;
     cursor: pointer;
     font-size: var(--md);
@@ -85,7 +86,7 @@ form a{
     border-radius: 8px;
     border: 1px solid var(--red);
     color: var(--red);
-    width: 100%;
+  
     cursor: pointer;
     font-size: var(--md);
     font-weight: bold;
@@ -97,12 +98,26 @@ form a{
     margin-bottom: 30px;
 }
 
-@media (max-width:640px) {
-    .logo{
-        display: block;
+.aside{
+    border: 2px solid var(--red);
+    border-radius: 10px;
+}
+
+@media (max-width:700px) {
+    .conteiner-primary{
+        display: flex;
     }
+    .form-conteiner{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside{
+        display: none;
+    }
+
     .secondary-button{
-        width: inherit;
+        width: 80%;
         
         bottom: 0;
         margin-bottom: 16px;
