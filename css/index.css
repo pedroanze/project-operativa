@@ -147,6 +147,77 @@ nav{
 }
 
 
+/* estilos footer */
+
+footer{
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.footer-conteiner{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+
+.footer-about{
+    margin-left: 40px;
+}
+.footer-about h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer-about p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.footer-follow-user{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-follow-user a{ 
+      
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer-follow-user p{
+    font-size: 16px;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+.footer-follow-user a:hover{
+    color: var(--red);
+}
+
+.footer-copy{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--white);
+}
+.footer-copy small{
+    font-size: 15px;
+}
+
 @media (max-width:640px) {
     .menu{
         display: block;
@@ -170,5 +241,12 @@ nav{
         width: 300px;
 
     }
+    .footer-conteiner{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+
 
 }
