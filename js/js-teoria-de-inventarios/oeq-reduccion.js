@@ -3,9 +3,8 @@ var ymin = document.getElementById("minimo");
 var yopt = document.getElementById("optimo");
 var tiem = document.getElementById("tiempo");
 var rops = document.getElementById("rop");
-var zona1 = document.getElementById("zona1");
-var zona2 = document.getElementById("zona2");
-var zona3 = document.getElementById("zona3");
+var zona = document.getElementById("zona");
+
 var posicion = document.getElementById("posicion");
 var b = document.getElementById("resultado");
 b.addEventListener("click", mostrarDatos);
@@ -16,10 +15,8 @@ function mostrarDatos() {
     ymin.innerHTML = "y min = "+minimo();
     yopt.innerHTML = "y opt = "+optimo();
     tiem.innerHTML = "tiempo = "+tiempo();
-    rops.innerHTML = " rop = "+rop()+")";
-    zona1.innerHTML = " zona I = ( 0 ; "+minimo();
-    zona2.innerHTML = " zona II = ("+minimo()+" ; "+ctu()+")";
-    zona3.innerHTML = " zona III = ("+ctu()+" ; infinito)";
+    rops.innerHTML = " rop = "+rop();
+    zona.innerHTML = " ( 0 ; "+minimo()+") - ("+minimo()+" ; "+ctu()+") - ("+ctu()+" ; infinito)";
     posicion.innerHTML = " q se encuentra en "+qzona();
 }
 function minimo (){
