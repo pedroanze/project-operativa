@@ -4,6 +4,6 @@ var niu=document.getElementById('niu');
 
 function p() {
     var p=lambda/niu;
-    p=p.toFixed(2)
-    return p
+    p=p.toFixed(2);
+    return p;
 }
