@@ -87,8 +87,15 @@ nav{
     text-align: center;
     }
 .welcome h1{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 40px;
+}
+.conteiner-titulo{
+    display:inline-flex;
+}
+.conteiner-titulo h1:nth-child(2){
+    padding-left: 13px;
+    color: var(--red);
 }
 /* particles.js */
 
@@ -232,7 +239,9 @@ footer{
     .navbar-left{
         display: none;
     }
-
+    .conteiner-titulo{
+        display: block;
+    }
     .cards-conteiner {
         display: grid;
         grid-template-columns: repeat(auto-fill,310px);
@@ -244,6 +253,11 @@ footer{
         margin-right: 0;
         width: 300px;
 
+    }
+
+    .bottom-info:hover{
+        width: 300px;
+        height: 101px;
     }
     .footer-conteiner{
         width: 90%;
