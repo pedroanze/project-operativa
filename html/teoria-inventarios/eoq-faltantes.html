@@ -7,6 +7,40 @@
     <title>MODELO EOQ CON FALTANTES PLANEADOS</title>
 </head>
 <body>
-    <H1>MODELO EOQ CON FALTANTES PLANEADOS</H1>
+    <form action="/" class = "form">
+        <label for="number" class = "label">Demanda</label>
+        <input type="number" placeholder="D" class = "input" id="demanda">
+
+        <label for="number" class = "label">Costo de preparación</label>
+        <input type="number" placeholder="K" class = "input" id="k">
+
+        <label for="number" class = "label">Costo de retención</label>
+        <input type="number" placeholder="H" class = "input" id="h">
+
+        <label for="number" class = "label">Costo de faltantes por Unidad por unidad de tiempo que falta</label>
+        <input type="number" placeholder="p" class = "input" id="p">
+        
+        <input type= "button" id="resultado" class="primary-button secondary-button" value="calcular">
+    </form>
+    
+    <div>
+        <ul>
+            <li>
+                <p id="s">calcular S*</p>
+            </li>
+
+            <li>
+                <p id="q">calcular Q*</p>
+            </li>
+
+            <li>
+                <p id="t">calcular t*</p>
+            </li>
+
+        </ul>
+    </div>
+    <script src="/js/js-teoria-de-inventarios/eoq-faltantes.js">
+
+    </script>
 </body>
 </html>
