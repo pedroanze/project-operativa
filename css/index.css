@@ -1,9 +1,10 @@
 :root {
     --very-light-pink: #C7C7C7;
     --text-input-field: #f7f7f7;
-    --red: #C23644;
+    --red: #c23644;
+    --gris: #EDF2F4;
     --white: #FFFFFF;
-    --black: #000000;
+    --black: #0a141d;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -31,6 +32,7 @@ nav{
     justify-content: space-between;
     padding: 0 24px ;
     border-bottom: 1px solid var(--very-light-pink);
+    background-color: var(--gris);
 }
 .menu{
     display: none;
@@ -60,8 +62,8 @@ nav{
 .navbar-left ul li a,
 .navbar-right ul li a {
     text-decoration: none;
-    color: var(--very-light-pink);
-    border: 1px solid var(--white);
+    color: var(--black);
+    border: 0px solid var(--black);
     padding: 8px;
     border-radius: 8px;
 }
@@ -86,6 +88,7 @@ nav{
     }
 .welcome h1{
     margin-bottom: 20px;
+    font-size: 40px;
 }
 /* particles.js */
 
@@ -94,8 +97,6 @@ nav{
     height: 50vh;
     
 }
-
-
 
  /* estilo del conteiner de botones */
 
@@ -111,6 +112,7 @@ nav{
     margin-top: 40px;
     margin-bottom: 20px;
     text-align: center;
+    color: var(--black);
 }
  .cards-conteiner {
     display: grid;
@@ -125,33 +127,36 @@ nav{
     align-items: center; 
     text-decoration: none;
     margin-top: 12px;
-    font-weight: bold;
+    font-weight:bolder;
     font-size: var(--lg);
-   
     width: 230px;
     height: 100px;
     background-color: var(--white);
     border: none;
-
     border: 1px solid var(--red);
     border-radius: 8px;
-    color: black;
-
+    color: var(--black);
+    padding: 3px;
     margin: 20px;  
     margin-top: 10px;
 
 }
 
 .bottom-info:hover{
-    border: 2px solid var(--red);
+    width: 231px;
+    height: 101px;
+    border: 3px solid var(--red);
+    font-size: 19px;
+    background-color:#f8f8f8 ;
 }
 
 
 /* estilos footer */
 
 footer{
+    margin-top: 40px;
     width: 100%;
-    background-color: #0a141d;
+    background-color: var(--black);
 }
 
 .footer-conteiner{
@@ -193,6 +198,7 @@ footer{
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
+
     background-color: #0d2033;
     text-align: center;
     transition: all 300ms ease;
@@ -223,12 +229,10 @@ footer{
         display: block;
         
     }
-    .navbar-left ul{
+    .navbar-left{
         display: none;
     }
-    .navbar-email{
-        display: none;
-    }
+
     .cards-conteiner {
         display: grid;
         grid-template-columns: repeat(auto-fill,310px);
