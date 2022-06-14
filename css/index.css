@@ -18,6 +18,7 @@
 body {
     margin: 0;
     font-family: 'Arenas movedizas', sans-serif;
+    
 }
 
 
@@ -122,9 +123,17 @@ nav{
     text-align: center;
     color: var(--black);
 }
+
+.texto-modelo-secundary{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--black);
+}
+
  .cards-conteiner {
     display: grid;
-    grid-template-columns: repeat(auto-fill,260px);
+    grid-template-columns: repeat(auto-fill,380px);
     place-content: center;
 }
 
@@ -137,8 +146,8 @@ nav{
     margin-top: 12px;
     font-weight:bolder;
     font-size: var(--lg);
-    width: 230px;
-    height: 100px;
+    width: 350px;
+    height: 150px;
     background-color: var(--white);
     border: none;
     border: 1px solid var(--red);
@@ -151,8 +160,8 @@ nav{
 }
 
 .bottom-info:hover{
-    width: 231px;
-    height: 101px;
+    width: 352px;
+    height: 151px;
     border: 3px solid var(--red);
     font-size: 19px;
     background-color:#f8f8f8 ;
