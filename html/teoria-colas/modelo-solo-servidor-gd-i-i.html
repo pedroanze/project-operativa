@@ -4,57 +4,198 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODELO DE UN SOLO SERVIDOR</title>
+    <link rel="stylesheet" href="/css/style-teoria-de-colas/eoq-reduccion.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>   <!-- banco de iconos -->
+    <title>MMc GD/infinito/infinito</title>
 </head>
 <body>
-    <h1>MODELO DE UN SOLO SERVIDOR</h1>
-    <form action="/" class="form">
-        <label for="number" class="label">Lambda</label>
-        <input type="number" placeholder="lambda" class="input" id="lambda">
+    
+    <nav>
+        <div class="navbar-left">
+            <a href="/index.html">
+                <img src="/image/logo.png" alt="logo" class ="logo">
+            </a>
+        
 
-        <label for="number" class="label">niu</label>
-        <input type="number" placeholder="niu" class="input" id="niu">
-
-        <label for="number" class="label">n</label>
-        <input type="number" placeholder="n" class="input" id="n">
-
-        <input type= "button" id="resultado" class="primary-button secondary-button" value="calcular">
-    </form>
-    <div>
+    </div>
+    <div class="navbar-right">
         <ul>
             <li>
-                <p id="p">Calcular p</p>
+                <a href="https://github.com/anze28/project-operativa">Repositorio</a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/drive/folders/1c9IreTssPFvzPOhniOqt16mfaGcfeUIw?usp=sharing">Documentación</a>
             </li>
 
-            <li>
-                <p id="p0">Calcular p0</p>
-            </li>
-
-            <li>
-                <p id="pn">Calcular pn</p>
-            </li>
-
-            <li>
-                <p id="ls">Calcular Ls</p>
-            </li>
-
-            <li>
-                <p id="ws">Calcular Ws</p>
-            </li>
-
-            <li>
-                <p id="wq">Calcular Wq</p>
-            </li>
-
-            <li>
-                <p id="lq">Calcular Lq</p>
-            </li>
-
-            <li>
-                <p id="c">Calcular c</p>
-            </li>
         </ul>
     </div>
+    </nav>
+
+
+    <div class ="menu">
+        <h2 class="titulo-sec">MMc GD/Infinito/Infinito</h2>
+        <div class="conteiner-primary">
+            <div class="conteiner-secundary">
+                
+                <form action="/" class = "form">
+                    
+                    <p class="titulo">Ingrese los Datos</p>
+                    <div class="form-conteiner"> 
+                        <div class="grid">
+                            <label for="number" class="label">Lambda</label>
+                            <input type="number" placeholder="lambda" class="input" id="lambda">
+                    
+                            <label for="number" class="label">niu</label>
+                            <input type="number" placeholder="niu" class="input" id="niu">
+                        </div>
+                        
+                        <div class="grid">
+                            <label for="number" class="label">n</label>
+                            <input type="number" placeholder="n" class="input" id="n">
+                        </div>
+                    </div>
+                                    
+                    <input type= "button" id="resultado" class="primary-button secondary-button" value="calcular">
+                </form>
+
+                <p class="titulo">Resultados</p>
+                <div class="conteiner-resultados">
+                    
+                    <div class="grid"> 
+    
+                        <ul>
+                            <li>
+                                <p class="texto-resultado-primary">p</p>
+                                <p class= "texto-resultado-secundary" id="p">Calcular p:</p>
+                            </li>
+                            <li>
+                                <p class="texto-resultado-primary">p0</p>
+                                <p class= "texto-resultado-secundary" id="p0">Calcular p0: </p>
+                            </li>
+                            <li>
+                                <p class="texto-resultado-primary">pn</p>
+                                <p class= "texto-resultado-secundary" id="pn">Calcular pn:</p>
+                            </li>
+                            <li>
+                                <p class="texto-resultado-primary">Ls</p>
+                                <p class= "texto-resultado-secundary" id="ls">calcular Ls:</p>
+                                
+
+                        
+
+    
+                        </ul>
+                    </div>
+                    <div class="grid">
+                        <ul>
+                                 <li>
+                                    <p class="texto-resultado-primary">Ws</p>
+                                    <p class= "texto-resultado-secundary" id="ws">calcular Ws:</p>
+                                </li>
+                                <li>
+                                    <p class="texto-resultado-primary">Wq</p>
+                                    <p class= "texto-resultado-secundary" id="wq">calcular Wq: </p>
+                                </li>
+                                <li>
+                                    <p class="texto-resultado-primary">Lq</p>
+                                    <p class= "texto-resultado-secundary" id="lq">calcular Lq: </p>
+                                </li>
+
+                                <li>
+                                    <p class="texto-resultado-primary">c</p>
+                                    <p class= "texto-resultado-secundary" id="c">Calcular c: </p>
+                                </li>
+                            
+                        </ul>
+                    </div>
+    
+                    
+                </div>
+
+
+            </div>
+            <aside class="aside">
+                <div class ="conteiner-links">
+                    <ul>
+                        <p class="titulo-link">Teoria de Inventarios</p>
+                        <li class="enlace">
+                            <a href="/html/teoria-inventarios/eoq-basico.html">Modelo EOQ básico</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="/html/teoria-inventarios/eoq-faltantes.html">Modelo EOQ con faltantes planeados</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="/html/teoria-inventarios/eoq-reducccion.html">Modelo EOQ con reducción de precio por cantidad</a>
+                        </li>
+                        <p class="titulo-link">Teoria de Colas</p>
+                        <p class="titulo-link-subtitulo">modelos de un solo servidor</p>
+                        <li class="enlace">
+                            <a href="/html/teoria-colas/modelo-solo-servidor-gd-i-i.html">MM1 GD/Infinito/Infinito</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="/html/teoria-colas/modelo-solo-servidor-gd-n-i.html">MM1 GD/N/Infinito</a>
+                        </li>
+
+                        <p class="titulo-link-subtitulo">modelos de varios servidores</p>
+
+                        <li class="enlace">
+                            <a href="/html/teoria-colas/modelo- vario-servidor-gd-i-i.html">MMc GD/infinito/infinito</a>
+                        </li>
+                        <li class="enlace">
+                            <a href="/html/teoria-colas/modelo-vario-servifor-gd-n-i.html">MMc GD/N/infinito</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+        
+            </aside>
+
+        </div>
+           
+        <footer>
+            <div class="footer-conteiner">
+                <div class="footer-about">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Este proyecto fue realizado por estudiantes de 	Quinto semestre de la carrera de ingeniera de sistemas de la Universidad Católica Boliviana regional “Tarija”, este proyecto es una automatización de unidades vistas en la materia de Investigación Operativa II utilizando tecnologías web y trabajando en base de  metodologías ágiles usando partes de SCRUM</p>
+                </div>
+    
+                <div class="footer-follow">
+                    <div class="footer-follow-user">
+                        <p>Pedro Anze (UI/UX & Frontend)</p>
+                        <div class="icons">
+                            <a href="https://www.linkedin.com/in/pedro-gustavo-anze-condori-65786a163/" class="fa fa-linkedin"></a>
+                            <a href="https://github.com/anze28" class="fa fa-github"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100014069383690" class="fa fa-facebook"></a>
+                            <a href="https://www.instagram.com/pedroanze_/" class="fa fa-instagram"></a>
+                           
+                            
+                        </div>
+    
+                        <p>Mateo Zubieta (Frontend & Logic)</p>
+                        <div class="icons">
+                            <a href="https://github.com/MattZub13" class="fa fa-github"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100004400895195" class="fa fa-facebook"></a>
+                            <a href="https://www.instagram.com/mateo_zubieta13/" class="fa fa-instagram"></a>
+                            
+                        </div>
+                        <p>Gabriel Mamani (Frontend & Testing)</p>
+                        <div class="icons">
+                            <a href="https://www.facebook.com/gabo.mamani.5" class="fa fa-facebook"></a>
+                            <a href="https://www.instagram.com/gabo_mf0/" class="fa fa-instagram"></a>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <small>
+                    &copy; 2022 <b>2harris</b> -Todos los Derechos Reservados.
+                </small>
+            </div>
+        </footer>
+
+    </div>
+
     <script src="/js/js-teoria-de-colas/modelo1serv-gd-i-i.js">
     </script>
 </body>

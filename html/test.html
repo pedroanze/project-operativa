@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style-teoria-de-colas/eoq-reduccion.css">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>   <!-- banco de iconos -->
-
-    <title>MODELO EOQ CON FALTANTES PLANEADOS</title>
+    <title>MMc GD/N/Infinito</title>
 </head>
 <body>
-
+    
     <nav>
         <div class="navbar-left">
             <a href="/index.html">
@@ -32,8 +31,9 @@
     </div>
     </nav>
 
+
     <div class ="menu">
-        <h2 class="titulo-sec">MODELO EOQ CON FALTANTES PLANEADOS</h2>
+        <h2 class="titulo-sec">MMc GD/N/Infinito</h2>
         <div class="conteiner-primary">
             <div class="conteiner-secundary">
                 
@@ -42,24 +42,29 @@
                     <p class="titulo">Ingrese los Datos</p>
                     <div class="form-conteiner"> 
                         <div class="grid">
-                            <label for="number" class = "label">Demanda</label>
-                            <input type="number" placeholder="D" class = "input" id="demanda">
-
-                            <label for="number" class = "label">Costo de preparación</label>
-                            <input type="number" placeholder="K" class = "input" id="k">
+                            <label for="number" class="label">Lambda</label>
+                            <input type="number" placeholder="lambda" class="input" id="lambda">
+                    
+                            <label for="number" class="label">niu</label>
+                            <input type="number" placeholder="niu" class="input" id="niu">
+                            
+                            <label for="number" class="label">C</label>
+                            <input type="number" placeholder="c" class="input" id="c">
+                            
                         </div>
                         
                         <div class="grid">
-                            <label for="number" class = "label">Costo de retención</label>
-                            <input type="number" placeholder="H" class = "input" id="h">
+                            <label for="number" class="label">N</label>
+                            <input type="number" placeholder="N" class="input" id="nmayus">
                     
-                            <label for="number" class = "label">Costo de faltantes por Unidad por unidad de tiempo que falta</label>
-                            <input type="number" placeholder="p" class = "input" id="p"> </div>
-                        
+                            <label for="number" class="label">n</label>
+                            <input type="number" placeholder="n" class="input" id="n">
+                        </div>
                     </div>
                                     
                     <input type= "button" id="resultado" class="primary-button secondary-button" value="calcular">
                 </form>
+
                 <p class="titulo">Resultados</p>
                 <div class="conteiner-resultados">
                     
@@ -67,13 +72,22 @@
     
                         <ul>
                             <li>
-                                <p class="texto-resultado-primary">S</p>
-                                <p class= "texto-resultado-secundary" id="s">calcular S*:</p>
+                                <p class="texto-resultado-primary">p</p>
+                                <p class= "texto-resultado-secundary" id="p">calcular p:</p>
                             </li>
                             <li>
-                                <p class="texto-resultado-primary">QQ</p>
-                                <p class= "texto-resultado-secundary" id="q">calcular Q*: </p>
+                                <p class="texto-resultado-primary">p0</p>
+                                <p class= "texto-resultado-secundary" id="p0">calcular p0: </p>
                             </li>
+                            <li>
+                                <p class="texto-resultado-primary">pn</p>
+                                <p class= "texto-resultado-secundary" id="pn">calcular pn:</p>
+                            </li>
+                            <li>
+                                <p class="texto-resultado-primary">Lq</p>
+                                <p class= "texto-resultado-secundary" id="lq">calcular Lq: </p>
+                            </li>
+                        
 
     
                         </ul>
@@ -81,9 +95,22 @@
                     <div class="grid">
                         <ul>
                             <li>
-                                <p class="texto-resultado-primary">t</p>
-                                <p class= "texto-resultado-secundary" id="t">calcular t*:</p>
+                                <p class="texto-resultado-primary">Lambda efec</p>
+                                <p class= "texto-resultado-secundary" id="lamefec">calcular Lambda efec:</p>
                             </li>
+                            <li>
+                                <p class="texto-resultado-primary">Ls</p>
+                                <p class= "texto-resultado-secundary" id="ls">calcular Ls:</p>
+                            </li>
+                            <li>
+                                <p class="texto-resultado-primary">Ws</p>
+                                <p class= "texto-resultado-secundary" id="ws">calcular Ws:</p>
+                            </li>
+                            <li>
+                                <p class="texto-resultado-primary">Wq</p>
+                                <p class= "texto-resultado-secundary" id="wq">calcular Wq: </p>
+                            </li>
+                            
                         </ul>
                     </div>
     
@@ -172,10 +199,8 @@
         </footer>
 
     </div>
-    
 
-    <script src="/js/js-teoria-de-inventarios/eoq-faltantes.js">
-
+    <script src="/js/js-teoria-de-colas/modelonserv-gd-n-i.js">
     </script>
 </body>
 </html>
