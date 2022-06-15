@@ -30,7 +30,7 @@ function rop(){
 
     if (l > time){
    
-        n = Math.floor(l/t);
+        n = Math.floor(l/time);
         console.log(n, rp, "gaaa gaaa");
         rp = l-(n*demanda);
         console.log(n, rp, "gaaa gaaa");
