@@ -31,7 +31,8 @@ function rop(){
         rp = l*demanda;
     }else{
         n = Math.floor(l/time);
-        rp = l-(n*demanda);
+        var le = l-(n*time);
+        rp=le*demanda;
     }
     rp = rp.toFixed(2);
     return rp
