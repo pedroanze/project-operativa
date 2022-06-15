@@ -27,13 +27,19 @@ function rop(){
     var time = tiempo();
     var n = 0;
     var rp = 0;
-    if (l < time){
-        rp = l*demanda;
-    }else{
+    if (l > time){
+   
         n = Math.floor(l/t);
+        console.log(n, rp, "gaaa gaaa");
         rp = l-(n*demanda);
+        console.log(n, rp, "gaaa gaaa");
+    }else if (l < time)
+    {
+        rp = l*demanda;
+
+        console.log(n, rp, "gaaa");
     }
-    console.log(n, rp, "gaaa");
+    
     rp = rp.toFixed(2);
     return rp
 }
