@@ -30,10 +30,9 @@ function rop(){
     if (l < time){
         rp = l*demanda;
     }else{
-        n = Math.floor(l/t);
+        n = Math.floor(l/time);
         rp = l-(n*demanda);
     }
-    console.log(n, rp, "gaaa");
     rp = rp.toFixed(2);
     return rp
 }

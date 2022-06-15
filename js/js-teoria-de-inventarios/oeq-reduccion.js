@@ -14,7 +14,7 @@ b.addEventListener("click", mostrarDatos);
 function mostrarDatos() {
     ymin.innerHTML = "y min = "+minimo();
     yopt.innerHTML = "y opt = "+optimo();
-    tiem.innerHTML = "tiempo = "+tiempo();
+   tiem.innerHTML = "tiempo = "+tiempo();
     rops.innerHTML = " rop = "+rop();
     zona.innerHTML = " ( 0 ; "+minimo()+") - ("+minimo()+" ; "+ctu()+") - ("+ctu()+" ; infinito)";
     posicion.innerHTML = " q se encuentra en "+qzona();
@@ -29,16 +29,14 @@ function minimo (){
 }
 
 function optimo (){
-    var demanda = parseFloat(document.getElementById("demanda").value);
-    var k = parseFloat(document.getElementById("k").value);
-    var h = parseFloat(document.getElementById("h").value);
-    var c1 = parseFloat(document.getElementById("c1").value);
-    var min = minimo();
-    var opt = ((demanda*c1)+((k*demanda)/min)+((h*min)/2));
-    console.log(min);
-    console.log(opt);
-    opt = opt.toFixed(2); 
-    return opt
+    var q=parseFloat(document.getElementById("q").value);
+    if(0<=q & q<minimo()){
+        return minimo()
+    }else if (minimo()<q & q<ctu()){
+        return q
+    }else if(ctu()<q){
+        return minimo()
+    }
 }
 function tiempo (){
     var demanda = parseFloat(document.getElementById("demanda").value);
@@ -56,51 +54,57 @@ function rop(){
     if (l < time){
         rp = l*demanda;
     }else{
-        n = Math.floor(l/t);
-        rp = l-(n*demanda);
+        n = Math.floor(l/time);
+        var le = l-(n*time);
+        rp=le*demanda
     }
-    console.log(n, rp, "gaaa");
     rp = rp.toFixed(2);
     return rp
 }
 function ctu(){
-    
     var demanda = parseFloat(document.getElementById("demanda").value);
     var k = parseFloat(document.getElementById("k").value);
     var h = parseFloat(document.getElementById("h").value);
-    var c2 = parseFloat(document.getElementById("c2").value);
-    var yopt = optimo();
-    var qopt = 0;
-    var a = 1;
-    console.log("prugbea", yopt);
-    console.log(c);
-    var b = ((2*((c2*demanda)-yopt))/h);
-    console.log(b);
-    var c = ((2*k*demanda)/h);
+    var c2=parseFloat(document.getElementById("c2").value);
+    var a=1;
+    var b=-1*((2*((c2*demanda)-tcu1())/(h)));
+    var c=(2*k*demanda)/h;
+
     
-    var q1 = ((-b+(Math.sqrt((b*b)-(4*a*c))))/2*a);
-    var q2 = ((-b-(Math.sqrt((b*b)-(4*a*c))))/2*a);
-    console.log("golasdf");
-    console.log(q1,"asda");
-    if (q1 > q2){
-        qopt = q1;
+    var q1 =-1*((-b-Math.sqrt(Math.pow(b,2)-(4*a*c)))/2*a);
+    var q2 =-1*((-b+Math.sqrt(Math.pow(b,2)-(4*a*c)))/2*a);
+
+    q1=q1.toFixed(3);
+    q2=q2.toFixed(3);
+    console.log(q1);
+    console.log(q2);
+    if (q1 < q2){
+        return q1
     }else{
-        qopt = q2;
+        return q2
     }
-    console.log(qopt, " afgsdg");
-    qopt = qopt.toFixed(2);
-    return qopt
+
 }
+
+function tcu1(){
+    var demanda = parseFloat(document.getElementById("demanda").value);
+    var k = parseFloat(document.getElementById("k").value);
+    var h = parseFloat(document.getElementById("h").value);
+    var c1=parseFloat(document.getElementById("c1").value);
+    var tcu1=(demanda*c1)+((k*demanda)/minimo())+((h/2)*minimo());
+    return tcu1
+}
+
 function qzona() {
-    console.log( "zonaaas");
+   
     var q = parseFloat(document.getElementById("q").value);
-    console.log(q, "aa");
+    
     var min = minimo();
-    console.log(min, "msid");
+    
     var opt =  ctu();
-    console.log(opt, "aga");
+    
     var posicion = "";
-    console.log(posicion, "zonaaas");
+
     if (q > 0 && q < min){
         posicion = "zona I";
     }
@@ -110,6 +114,6 @@ function qzona() {
     if (q > opt ){
         posicion = "zona III";
     }
-    console.log(posicion, "zonaaas");
+    
     return posicion
 }
