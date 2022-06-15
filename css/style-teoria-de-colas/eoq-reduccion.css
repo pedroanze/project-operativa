@@ -96,6 +96,17 @@ nav{
     
 }
 
+.conteiner-info{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid var(--red);
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+   
+    
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -310,6 +321,13 @@ footer{
     .conteiner-resultados{
         display: flex;
         flex-direction: column;
+    }
+
+
+    .conteiner-info{
+        display: flex;
+        flex-direction: column;
+        width: 277px;
     }
     .grid{
         display: flex;
