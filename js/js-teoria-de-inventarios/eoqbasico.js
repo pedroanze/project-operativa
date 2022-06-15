@@ -27,6 +27,7 @@ function rop(){
     var time = tiempo();
     var n = 0;
     var rp = 0;
+
     if (l > time){
    
         n = Math.floor(l/t);
@@ -40,6 +41,13 @@ function rop(){
         console.log(n, rp, "gaaa");
     }
     
+    if (l < time){
+        rp = l*demanda;
+    }else{
+        n = Math.floor(l/time);
+        var le = l-(n*time);
+        rp=le*demanda;
+    }
     rp = rp.toFixed(2);
     return rp
 }
