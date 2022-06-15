@@ -92,7 +92,7 @@ nav{
     grid-template-columns: repeat(2, 1fr);
     border: 2px solid var(--red);
     border-radius: 20px;
-    padding: 10px 30px 10px 30px;
+    padding: 20px 30px 20px 30px;
     
 }
 
@@ -109,6 +109,16 @@ nav{
     font-weight: bold;
     margin-bottom: 8px;
     
+}
+
+.titulo-sec{
+
+    font-size:22px;
+    padding: 4px;
+    color: var(--red);
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .label {
@@ -304,6 +314,10 @@ footer{
     .grid{
         display: flex;
         flex-direction: column;
+        
+    }
+    ul{
+        margin: 0px;
     }
     .conteiner-secundary{
         margin-left: 0px;
@@ -324,9 +338,7 @@ footer{
         margin-bottom: 16px;
         
     }
-    footer{
-       margin-top: 550px; 
-    }
+
     .footer-conteiner{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
